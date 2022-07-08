@@ -47,7 +47,7 @@ int allocationBooks(vector<int> &arr, int n, int m) {
 }
 
 int main(){
-    vector<int> arr = {10, 20, 30, 40};
+    vector<int> arr = {5,5,5,5};
     int n = arr.size();
     int students = 2;
 

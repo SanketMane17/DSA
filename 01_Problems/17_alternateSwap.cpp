@@ -5,7 +5,7 @@ void alternateSwap(int *arr, int size) {
     int pos1 = 0; 
     int pos2 = 1;
     
-    while(pos2 <+ size) {
+    while(pos2 <= size) {
         swap(arr[pos1], arr[pos2]);
         pos1 += 2;
         pos2 += 2;

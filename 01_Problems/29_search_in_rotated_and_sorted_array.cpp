@@ -4,7 +4,7 @@
 
 // o/p = 3 [index of 2]
 // steps : 
-// 1] find povot element
+// 1] find pivot element
 // 2] check cond'n for where the elmenet lies i.e first or second line in graph representation
 // 3] apply binary search on that line and return index
 

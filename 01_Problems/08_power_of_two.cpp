@@ -10,27 +10,30 @@ int main()
     int isPow = false;
 
     // Brute force approch
-    for (int i = 0; i <= n; i++)
-    {
-        if (pow(2, i) == n)
-        {
-            isPow = true;
-        }
-    }
-
-    // Optimized approch
-    // int ans = 1;
-
-    // for (int i = 0; i <= 30; i++)
+    // for (int i = 0; i <= n; i++)
     // {
-    //     if (ans == n)
+    //     if (pow(2, i) == n)
     //     {
     //         isPow = true;
     //     }
-
-    //     if (ans < INT_MAX / 2)
-    //         ans *= 2;
     // }
+
+    // Optimized approch
+    int ans = 1;
+
+    for (int i = 0; i <= 30; i++)
+    {
+        if (ans == n)
+        {
+            isPow = true;
+            cout <<"ans" << ans << endl;
+        }
+
+        if (ans < INT_MAX / 2)
+            ans *= 2;
+        
+        cout<< ans << endl;
+    }
 
     if (isPow == true)
         cout << "True";

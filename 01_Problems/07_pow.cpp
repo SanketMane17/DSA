@@ -2,12 +2,25 @@
 using namespace std;
 
 int pow(int a, int b) {
-    int ans = 1;
-    for(int i = 1; i <= b;i++) {
-        ans *= a;
+    int res = 1;
+    while(b > 0) {
+        if((b&1) != 0) {
+            res *= a;
+        }
+        a *= a;
+        b = b >> 1;
     }
-    return ans;
+    return res;
 }
+
+// Time complexity - O(n)
+// int pow(int a, int b) {
+//     int ans = 1;
+//     for(int i = 1; i <= b;i++) {
+//         ans *= a;
+//     }
+//     return ans;
+// }
 
 int main(){
     int a = 2;

@@ -13,7 +13,7 @@ int maxArea(vector<int> &height)
 
     int max = 0;
 
-    // Two pointer approach
+    // Two pointer approach - O(n)
     int left = 0, right = height.size() - 1;
 
     while (left < right)

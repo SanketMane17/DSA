@@ -1,6 +1,9 @@
 // arr = {1,7,3,6,5,6}
 
 // sum(left part) = sum(right part)
+// sum(i - 1) == sum(i + 1)
+// return i;
+
 //   1 + 7 + 3  = 11 = 5 + 6
 
 // index of 6 = 3 -> Pivot index 

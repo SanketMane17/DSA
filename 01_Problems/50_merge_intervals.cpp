@@ -18,45 +18,45 @@ vector<vector<int>> mergeIntervals(vector<vector<int>> &intervals)
 
     // TC - O(nlogn)
     // SC - O(1)
-    // int idx = 0;
-    // for (int i = 1; i < n; i++)
-    // {
-    //     if (intervals[i][0] <= intervals[idx][1])
-    //         intervals[idx][1] = max(intervals[idx][1], intervals[i][1]);
-    //     else
-    //     {
-    //         idx++;
-    //         intervals[idx] = intervals[i];
-    //     }
-    // }
-    // cout << idx << endl;
+    int idx = 0;
+    for (int i = 1; i < n; i++)
+    {
+        if (intervals[i][0] <= intervals[idx][1])
+            intervals[idx][1] = max(intervals[idx][1], intervals[i][1]);
+        else
+        {
+            idx++;
+            intervals[idx] = intervals[i];
+        }
+    }
+    cout << idx << endl;
 
-    // intervals.resize(idx+1);
-    // return intervals;
+    intervals.resize(idx+1);
+    return intervals;
 
     // TC - O(nlogn)
     // SC - O(n)
 
-    vector<vector<int>> ans;
+    // vector<vector<int>> ans;
 
-    int prev_st = intervals[0][0], prev_end = intervals[0][1];
+    // int prev_st = intervals[0][0], prev_end = intervals[0][1];
 
-    for(int i = 1;i < n;i++) {
-        int curr_st = intervals[i][0], curr_end = intervals[i][1];
+    // for(int i = 1;i < n;i++) {
+    //     int curr_st = intervals[i][0], curr_end = intervals[i][1];
 
-        if(curr_st <= prev_end)
-            prev_end = max(prev_end, curr_end);
-        else {
-            ans.push_back({prev_st, prev_end});
-            prev_st = curr_st;
-            prev_end = curr_end;     
-        }
+    //     if(curr_st <= prev_end)
+    //         prev_end = max(prev_end, curr_end);
+    //     else {
+    //         ans.push_back({prev_st, prev_end});
+    //         prev_st = curr_st;
+    //         prev_end = curr_end;     
+    //     }
 
-        if(i == n - 1)
-            ans.push_back({prev_st, prev_end});
-    }
+    //     if(i == n - 1)
+    //         ans.push_back({prev_st, prev_end});
+    // }
 
-    return ans;
+    // return ans;
 }
 
 int main()

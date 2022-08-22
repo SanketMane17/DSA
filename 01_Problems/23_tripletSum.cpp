@@ -8,7 +8,7 @@ vector<int> tripletSum(vector<int> &arr, int s) {
     sort(arr.begin(), arr.end());
     
     // Two pointer approach
-    // TC - O(n), SC - O(1)
+    // TC - O(n^2), SC - O(1)
 
     int a, left, right, x;
     for(int i = 0;i < arr.size();i++) {

@@ -40,9 +40,9 @@ long long contigiousSequence(vector<long long> &arr)
 int main()
 {
 
-    // vector<long long> arr = {-2, -3, 4, -1, -2, 1, 5, -3};
+    vector<long long> arr = {-2, -3, 4, -1, -2, 1, 5, -3};
     // vector<long long> arr = {-1000000000, -1000000000, -1000000000, -1000000000, -1000000000, -1000000000};
-    vector<long long> arr = {-10, -10, -10, -10};
+    // vector<long long> arr = {-10, -10, -10, -10};
 
     long long maxSum = contigiousSequence(arr);
     cout << maxSum << endl;

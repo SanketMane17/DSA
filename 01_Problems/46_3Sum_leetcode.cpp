@@ -43,7 +43,7 @@ vector<vector<int>> threeSum(vector<int> &nums, int s)
                 if(sum == x) {
                     ans.push_back({a, nums[left], nums[right]});
 
-                    // For avoid duplication
+                    // For avoiding duplication
                     while(left < right && nums[left] == nums[left+1]) left++;
                     while(left < right && nums[right] == nums[right-1]) right--;
 

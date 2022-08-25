@@ -9,31 +9,34 @@
 # include<iostream>
 using namespace std;
 
-int findPivot(int arr[], int n) {
-    int start = 0;
-    int end = n - 1;
-    int mid = start + (end - start) / 2;
+int getPivot(int arr[], int n) {
 
-    while(start < end) {
-        if(arr[mid] >= arr[0]) {
-            // if true, pivot lies on second line
-            start = mid + 1;
-        }
-        else 
-            end = mid;
-        
-        mid = start + (end - start) / 2;
+    int s = 0;
+    int e = n-1;
+    int mid = s + (e-s)/2;
+
+    // When all elements are in ascending order
+    if(arr[s] < arr[e]){ 
+        return arr[s];
     }
 
-    return start;
+    while(s<e) {
+
+        if(arr[mid] >= arr[0])
+        {
+            s = mid+1;
+        }
+        else{
+            e = mid;
+        }
+        mid = s + (e-s)/2;
+    }
+    return arr[s];
 }
 
-int main(){
-    int arr[] = {3, 8, 10, 17, 1};
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    int res = findPivot(arr, n);
-
-    cout<< "Pivot in array = " << res << endl;
-    return 0;
+int main() {
+    // int arr[] = {1, 3, 8, 10, 17, 0};
+    // int arr[] = {3,4,5,1,2};
+    int arr[] = {11,13,15,17};
+    cout << "Pivot is " << getPivot(arr, 4) << endl;
 }

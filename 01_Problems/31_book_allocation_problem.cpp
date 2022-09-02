@@ -28,6 +28,7 @@ int allocationBooks(vector<int> &arr, int n, int m) {
     for(int i = 0;i < n;i++)
         sum += arr[i];
     
+    // Search Space - [0, sum]
     int e = sum;
     int ans = -1;
     int mid = s + (e -s) /2;

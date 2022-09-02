@@ -19,6 +19,7 @@ int main()
     // }
 
     // Optimized approch
+    // TC - O(1)
     int ans = 1;
 
     for (int i = 0; i <= 30; i++)

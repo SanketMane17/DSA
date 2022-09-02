@@ -5,6 +5,8 @@ using namespace std;
 vector<int> arrayIntersection(vector<int> &arr1, vector<int> &arr2) {
     vector<int> newVec;
     // Optimized code 
+    // TC - O(n)
+    // SC - O(1)
 
     int i = 0, j = 0;
     while(i < arr1.size() && j < arr2.size()) {
@@ -13,6 +15,7 @@ vector<int> arrayIntersection(vector<int> &arr1, vector<int> &arr2) {
         else if(arr1[i] == arr2[j]) {
             newVec.push_back(arr1[i]);
             i++;
+            j++;
         }
         else
             j++;
@@ -37,7 +40,7 @@ vector<int> arrayIntersection(vector<int> &arr1, vector<int> &arr2) {
 }
 
 int main(){
-    vector<int>arr1 = {1,2,2,3,4};
+    vector<int>arr1 = {1,2,3,4};
     vector<int>arr2 = {2,2,3,3};
 
     vector<int> output = arrayIntersection(arr1, arr2);

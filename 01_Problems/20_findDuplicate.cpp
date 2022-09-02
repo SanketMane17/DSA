@@ -6,6 +6,9 @@ using namespace std;
 int findDuplicate(vector<int> &arr) {
 
     // Optimized code - 1
+    // TC - O(n)
+    // SC - O(1)
+    
     // int ans = 0;
     
     // for(int i = 0;i < arr.size();i++) {
@@ -17,6 +20,7 @@ int findDuplicate(vector<int> &arr) {
     // }
 
     // Another approch
+    // TC - O(n * logn)
 
     sort(arr.begin(), arr.end());
 

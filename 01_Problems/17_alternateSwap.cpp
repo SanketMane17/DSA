@@ -2,6 +2,10 @@
 using namespace std;
 
 void alternateSwap(int *arr, int size) {
+
+    // TC - O(n)
+    // SC - O(1)
+    
     int pos1 = 0; 
     int pos2 = 1;
     

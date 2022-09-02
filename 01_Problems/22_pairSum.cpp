@@ -5,19 +5,43 @@ using namespace std;
 
 vector<vector<int>> pairSum(vector<int> &arr, int s) {
     vector<vector<int>> ans;
-    for(int i = 0;i < arr.size();i++) { 
-        int element = arr[i];
-        for(int j = i + 1;j < arr.size();j++) {
-            if(element + arr[j] == s) {
-                vector<int> temp;
-                temp.push_back(min(element, arr[j]));
-                temp.push_back(max(element, arr[j]));
-                ans.push_back(temp);
-            }
+
+    // TC - O(n * logn)
+    // SC - O(n)
+    
+    sort(arr.begin(), arr.end());
+    // -3, -2, 2, 3, 3
+
+    int left = 0, right = arr.size() - 1;
+    while(left < right) {
+        int sum = arr[left] + arr[right];
+        if(sum == s) {
+            ans.push_back({arr[left], arr[right]});
+            right--;
+        } else if(sum < s) {
+            left++;
+        } else {
+            right--;
         }
     }
 
-    sort(ans.begin(), ans.end());
+
+    // TC - O(n)
+    // SC - O(n)
+
+    // for(int i = 0;i < arr.size();i++) { 
+    //     int element = arr[i];
+    //     for(int j = i + 1;j < arr.size();j++) {
+    //         if(element + arr[j] == s) {
+    //             vector<int> temp;
+    //             temp.push_back(min(element, arr[j]));
+    //             temp.push_back(max(element, arr[j]));
+    //             ans.push_back(temp);
+    //         }
+    //     }
+    // }
+
+    // sort(ans.begin(), ans.end());
 
     return ans;
 }

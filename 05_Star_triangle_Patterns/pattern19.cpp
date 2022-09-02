@@ -15,7 +15,6 @@ int main(){
     cin>> n;
 
     while(row <= n){
-        int col = 1;
         int star = (n - row + 1);
             while(star){
                 cout<< "*";

@@ -8,6 +8,9 @@ vector<int> findAllDuplicates(vector<int> &arr)
 {
 
     // Another approach
+    // TC - O(n)
+    // SC - O(n)
+    
     int n = arr.size();
     vector<int> res;
 
@@ -18,7 +21,7 @@ vector<int> findAllDuplicates(vector<int> &arr)
     }
 
     for (int i = 0; i < n; i++) {
-        cout<< arr[i] << "/" << n << "=" << arr[i]/n << " (" << i << ")" <<endl;
+        cout<< arr[i] << "/" << n << "=" << arr[i]/n << endl;
         if (arr[i] / n >= 2)
             res.push_back(i);
     }

@@ -3,6 +3,10 @@
 using namespace std;
 
 void sort_0_1_2(vector<int> &arr) {
+
+    // TC - O(n)
+    // SC - O(1)
+    
     int firstvalue = 0;
     int thirdvalue = 2;
 

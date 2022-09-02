@@ -1,11 +1,11 @@
-// nums = {1, 2, 3, 7, 9} -> sorted numsay
-// nums = {7, 9, 1, 2, 3} -> rotated and sorted numsay
+// nums = {1, 2, 3, 7, 9} -> sorted array
+// nums = {7, 9, 1, 2, 3} -> rotated and sorted array
 // key = 2
 
 // o/p = 3 [index of 2]
 // steps :
 // 1] find pivot element
-// 2] check cond'n for where the elmenet lies i.e first or second line in graph representation
+// 2] check cond'n for where the element lies i.e first or second line in graph representation
 // 3] apply binary search on that line and return index
 
 #include <iostream>

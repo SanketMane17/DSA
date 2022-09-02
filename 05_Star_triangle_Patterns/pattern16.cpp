@@ -9,9 +9,9 @@
 using namespace std;
 
 int main(){
-     int n, row = 1;
-    cout<< "Enter n = ";
-    cin>> n;
+     int n = 4, row = 1;
+    // cout<< "Enter n = ";
+    // cin>> n;
 
     while(row <= n){
         int col = 1;

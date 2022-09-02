@@ -17,18 +17,14 @@ int main(){
         int space = row - 1;
         int position = n - row + 1;
         int value = row;
-        while(col <= row){
-            // Print spaces
-            while(space){
-                cout<< " ";
-                space--;
-            }
-            while(position){
-                cout<< value;
-                value++;
-                position--;
-            }
-        col++;
+         while(space){
+            cout<< " ";
+            space--;
+        }
+        while(position){
+            cout<< value;
+            value++;
+            position--;
         }
         cout<< endl;
         row = row + 1;

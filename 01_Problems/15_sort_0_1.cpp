@@ -4,6 +4,10 @@
 using namespace std;
 
 void sort_0_1(vector<int> & arr) {
+
+    // TC - O(n)
+    // SC - O(1)
+    
     int left = 0;
     int right = arr.size() - 1;
 

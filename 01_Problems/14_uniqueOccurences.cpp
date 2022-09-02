@@ -1,39 +1,39 @@
-// Not solved Yet
+// Not solved 
+// 1, 2, 2, 1, 1, 3
+// 1 : 3
+// 2 : 2
+// 3 : 1
 
 #include <iostream>
+#include<unordered_map>
+#include<unordered_set>
 using namespace std;
 
-int countOccurrences(int *arr, int n, int num)
-{
-    int cnt = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (num == arr[i])
-        {
-            cnt++;
-        }
+bool uniqueOccurrences(int *arr, int n) {
+
+    // TC - O(n) + O(n) = O(n)
+    // SC - O(n)
+    
+    unordered_map<int, int> mpp; // Space - O(n)
+
+    for(int i = 0;i < n;i++) { // Time - O(n)
+        mpp[arr[i]]++;
     }
-    return cnt++;
+
+    unordered_set<int> set; // Space - O(n)
+    for(auto it: mpp) { // Time - O(n)
+        if(set.find(it.second) != set.end()) 
+            return false;
+        else 
+            set.insert(it.second);
+    }
+    return true;
 }
 
-void uniqueOccurrences(int *arr, int n)
-{
-
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] != arr[i + 1])
-        {
-            cout << arr[i] << " = " << countOccurrences(arr, n, arr[i]) << endl;
-        }
-    }
-}
-
-int main()
-{
+int main() {
     int arr[] = {1, 2, 2, 1, 1, 3};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    uniqueOccurrences(arr, size);
-    // cout<< countOccurrences(arr, size, 2);
+    cout<< uniqueOccurrences(arr, size) << endl;;
     return 0;
 }

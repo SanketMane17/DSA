@@ -24,7 +24,7 @@ void printArray(vector<int> arr) {
 void frequencyCount(vector<int> &arr, int n)
 {
     // TC - O(n)
-    // SC - O(1)
+    // SC - O(n)
 
     unordered_map<int, int> mpp;
 

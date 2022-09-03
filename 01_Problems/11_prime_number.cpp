@@ -1,13 +1,23 @@
 # include<iostream>
+#include<math.h>
 using namespace std;
 
 bool isPrime(int n) {
-    for(int i = 2;i < n;i++) {
-        if(n % i == 0) {
+
+    // TC - O(root(n))
+    for(int i = 2;i <= sqrt(n);i++) {
+        if(n % i == 0)
             return false;
-        }
     }
     return true;
+
+    // TC - O(n)
+    // for(int i = 2;i < n;i++) {
+    //     if(n % i == 0) {
+    //         return false;
+    //     }
+    // }
+    // return true;
 }
 
 int main(){

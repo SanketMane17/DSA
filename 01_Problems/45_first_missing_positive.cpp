@@ -40,6 +40,9 @@ int main()
     vector<int> nums = {3, 4, -1, 1};
     // vector<int> nums = {1, 3, 2 , 0};
     // vector<int> nums = {1, 1, 2, 2 , 0};
+    // vector<int> nums = {3, 0, 1};
+    // vector<int> nums = {1};
+    // vector<int> nums = {0};
 
     int ans = findMissingPositiveInteger(nums);
     cout<< ans << endl;

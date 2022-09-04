@@ -28,6 +28,7 @@ unsigned int reverseBits(unsigned int n)
     // Reverse it
     reverse(binaryNum.begin(), binaryNum.end());
 
+    // Convert binary into decimal
     int dec_value = 0;
     int base = 1;
 

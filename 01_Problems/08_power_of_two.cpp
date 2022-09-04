@@ -9,6 +9,7 @@ int main()
     cin >> n;
     int isPow = false;
 
+    // TC - O(n * logn)
     // Brute force approch
     // for (int i = 0; i <= n; i++)
     // {

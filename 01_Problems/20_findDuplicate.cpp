@@ -9,14 +9,27 @@ int findDuplicate(vector<int> &arr) {
     // TC - O(n)
     // SC - O(1)
     
-    int ans = 0;
+    // int ans = 0;
     
+    // for(int i = 0;i < arr.size();i++) {
+    //     ans = ans ^ arr[i];
+    // }
+    
+    // for(int i = 1;i < arr.size();i++) {
+    //     ans = ans ^ i;
+    // }
+
+    // Another approch
+    // TC - O(n)
+    // SC - O(1)
+
     for(int i = 0;i < arr.size();i++) {
-        ans = ans ^ arr[i];
-    }
-    
-    for(int i = 1;i < arr.size();i++) {
-        ans = ans ^ i;
+        int val = abs(arr[i]);
+
+        if(arr[val - 1] >= 0)
+            arr[val - 1] = -arr[val - 1];
+        else 
+            return val;
     }
 
     // Another approch
@@ -39,7 +52,7 @@ int findDuplicate(vector<int> &arr) {
     //     }
     // }
 
-    return ans;
+    // return ans;
 }
 
 int main(){

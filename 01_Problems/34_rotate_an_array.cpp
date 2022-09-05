@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 # include<vector>
 using namespace std;
 
@@ -12,35 +12,43 @@ void printArray(vector<int> arr, int n)
 
 // Best approch : 
 
-void reverseArray(vector<int> &arr, int s, int e)
-{
-    int start = s;
-    int end = e;
-    while (start <= end)
-    {
-        swap(arr[start], arr[end]);
-        start++;
-        end--;
-    }
-}
-
 // Function to rotate an array by d elements in counter-clockwise direction.
 // TC - O(n)
 // SC - O(1)
 
-void rotateArr(vector<int> &arr, int d, int n)
+void rotateArr(vector<int> &nums, int k, int n)
 {
-    reverseArray(arr, 0, n - 1);
-    reverseArray(arr, d + 1, n - 1);
-    reverseArray(arr, 0, d);
+    k = k % n; // rotating array 10 times is sames as rotating array 10%n size of array
+    reverse(nums.begin(), nums.end());
+    reverse(nums.begin(), nums.begin() + k);
+    reverse(nums.begin() + k, nums.end());
 }
 
+// TC - O(n^2)
+// SC - O(1)
+
+// void rotateArr(vector<int> &nums, int k, int n) {
+//     if(n > k) {
+//         reverse(nums.begin(), nums.end());
+//         reverse(nums.begin(), nums.begin() + k);
+//         reverse(nums.begin() + k, nums.end());
+//     } else {
+//         while(k) {
+//             int lastElem = nums[n - 1];
+//             for(int i = n - 1;i > 0;i--) {
+//                 nums[i] = nums[i - 1];
+//             }
+//             nums[0] = lastElem;
+//             k--;
+//         }
+//     }
+// }
 
 
 // TC - O(n)
 // SC - O(n)
 
-// void rotateArray(vector<int> arr, int n, int d) {
+// void rotateArr(vector<int> arr, int n, int d) {
 //     vector<int> temp;
     
 //     for(int i = d; i < n;i++) {
@@ -55,10 +63,10 @@ void rotateArr(vector<int> &arr, int d, int n)
 
 int main()
 {
-    vector<int> arr = {1, 2, 3, 4, 5};
-    // int n = sizeof(arr) / sizeof(arr[0]);
+    // vector<int> arr = {1, 2, 3, 4, 5};
+    vector<int> arr = {1, 2};
     int n = arr.size();
-    int d = 2;
+    int d = 3;
 
     // rotateArray(arr, n, d);
     rotateArr(arr, d, n);

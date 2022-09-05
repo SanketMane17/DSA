@@ -1,47 +1,63 @@
-# include<iostream>
+# include<bits/stdc++.h>
+# include<set>
 # include<vector>
 using namespace std;
 
-vector<int> arrayIntersection(vector<int> &arr1, vector<int> &arr2) {
-    vector<int> newVec;
-    // Optimized code 
-    // TC - O(n)
-    // SC - O(1)
+vector<int> arrayIntersection(vector<int> &nums1, vector<int>& nums2) {
 
+    // If array's are not sorted
+    // TC - O(n * log n)
+    // SC - O(n)
+
+    sort(nums1.begin(), nums1.end());
+    sort(nums2.begin(), nums2.end());
+
+    // If array's are already sorted
+    // TC - O(n)
+    // SC - O(n)
+
+    set<int> s;
+    vector<int> ans;
     int i = 0, j = 0;
-    while(i < arr1.size() && j < arr2.size()) {
-        if(arr1[i] < arr2[j])
+    while(i < nums1.size() && j < nums2.size()) {
+        if(nums1[i] < nums2[j]) {
             i++;
-        else if(arr1[i] == arr2[j]) {
-            newVec.push_back(arr1[i]);
-            i++;
+        } else if(nums1[i] == nums2[j]) {
+            s.insert(nums1[i]);
+            i++;j++;
+        } else {
             j++;
         }
-        else
-            j++;
     }
+    
+    for(auto i: s)
+        ans.push_back(i);
 
-    // Time complexity => O(n^2)
+    return ans;
 
-    // for(int i = 0;i < arr1.size();i++) {
-    //     for(int j = 0;j < arr2.size();j++) {
-
-    //         if(arr1[i] < arr2[j])
-    //             break;
-    //         if(arr1[i] == arr2[j]) {
-    //             newVec.push_back(arr1[i]);
-    //             arr2[j] = -111;
-    //             break;
-    //         }
+    // TC - O(n^2)
+    // SC - O(n)
+    // vector<int> newVec;
+    // set<int> s;
+    // for(int i = 0;i < nums1.size();i++) {
+    //     for(int j = 0;j < nums2.size();j++) {
+    //        if(nums1[i] == nums2[j])
+    //         s.insert(nums1[i]);
     //     }
     // }
 
-    return newVec;
+    // for(auto i : s)
+    //     newVec.push_back(i);
+    // return newVec;
 }
 
 int main(){
-    vector<int>arr1 = {1,2,3,4};
-    vector<int>arr2 = {2,2,3,3};
+    // vector<int>arr1 = {1,2,3,4};
+    // vector<int>arr2 = {2,2,3,3};
+    vector<int>arr1 = {1, 2, 2, 1};
+    vector<int>arr2 = {2,2};
+    // vector<int>arr1 = {4, 9, 5};
+    // vector<int>arr2 = {9,4,9,8,4};
 
     vector<int> output = arrayIntersection(arr1, arr2);
     

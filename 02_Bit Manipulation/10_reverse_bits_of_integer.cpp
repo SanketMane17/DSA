@@ -28,21 +28,33 @@ unsigned int reverseBits(unsigned int n)
     // Reverse it
     reverse(binaryNum.begin(), binaryNum.end());
 
+    cout<< binaryNum << endl;
     // Convert binary into decimal
-    int dec_value = 0;
-    int base = 1;
+    // int dec_value = 0;
+    // int base = 1;
 
-	for (int i = 31; i >= 0; i--) {
-		if (binaryNum[i] == '1')
-			dec_value += base;
-		base = base * 2;
-	}
-    return dec_value;
+	// for (int i = 31; i >= 0; i--) {
+	// 	if (binaryNum[i] == '1')
+	// 		dec_value += base;
+	// 	base = base * 2;
+	// }
+    // return dec_value;
+
+    long long ans = 0;
+    long long base = 1;
+    for(int i = 31;i >= 0;i--) {
+        if(binaryNum[i] == '1') {
+            ans += base;
+        }
+        base *= 2;
+    }
+    return ans;
 }
 
 int main()
 {
-    unsigned int n = 43261596;
+    // unsigned int n = 43261596;
+    unsigned int n = 1;
 
     unsigned int res = reverseBits(n);
     cout << res << endl;

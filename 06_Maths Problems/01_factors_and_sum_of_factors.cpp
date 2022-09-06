@@ -11,7 +11,7 @@ vector<int> findFactors(int n) {
     int cnt = 0;
     for(int i = 1;i <= sqrt(n);i++) {
         if(n % i == 0) {
-            if (i == (n / i)) { // (1, 16)(2, 8)(4, 4) <-- for n - 16
+            if (i == (n / i)) { // (1, 16)(2, 8)(4, 4) <-- for n = 16
                 cnt += 1;
                 sum += i;
             }

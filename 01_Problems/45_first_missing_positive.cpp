@@ -24,6 +24,18 @@ int findMissingPositiveInteger(vector<int> &nums) {
     // sort(nums.begin(), nums.end());
     // int temp = 1;
     // for(int i = 0;i < nums.size();i++) {
+    //     if(nums[i] == temp)
+    //         temp++;
+    // }
+    // return temp;
+
+    // Both approches are same, so try both
+
+    // TC - O(nlogn)
+    // SC - O(1)
+    // sort(nums.begin(), nums.end());
+    // int temp = 1;
+    // for(int i = 0;i < nums.size();i++) {
     //     if(nums[i] > 0) {
     //         if(nums[i] != temp)
     //             return temp;
@@ -37,8 +49,8 @@ int findMissingPositiveInteger(vector<int> &nums) {
 
 int main()
 {
-    vector<int> nums = {3, 4, -1, 1};
-    // vector<int> nums = {1, 3, 2 , 0};
+    // vector<int> nums = {3, 4, -1, 1};
+    vector<int> nums = {1, 3, 2 , 0};
     // vector<int> nums = {1, 1, 2, 2 , 0};
     // vector<int> nums = {3, 0, 1};
     // vector<int> nums = {1};

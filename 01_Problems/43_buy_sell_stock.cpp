@@ -1,4 +1,6 @@
 // Find max profit every time buy and sell the stock
+// 7, 1, 5, 3, 6, 4
+// maxProfit = 1->5, 3->6 = 4 + 3 = 7;
 
 #include <iostream>
 #include <vector>

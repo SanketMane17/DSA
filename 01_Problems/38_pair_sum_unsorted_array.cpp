@@ -4,6 +4,9 @@
 using namespace std;
 
 vector<int> pairSum(vector<int> &arr, int target) {
+    // TC - O(n)
+    // SC - O(n)
+
     vector<int> ans;
     unordered_map<int, int> mpp;
 
@@ -21,12 +24,14 @@ vector<int> pairSum(vector<int> &arr, int target) {
 }
 
 int main(){
-    vector<int> arr = {2, 6, 5, 8, 11};
-    int target = 14;
+    // vector<int> arr = {2, 6, 5, 8, 11};
+    // int target = 14;
+    vector<int> arr = {1, 4, 45, 6, 10, 8};
+    int target = 16;
 
     vector<int> ans = pairSum(arr, target);
     for(int i = 0;i < ans.size();i++) {
-        cout<< ans[i] << " ";
+        cout<< ans[i] << " "; // indexes
     }
 
     // pairSum(arr, target);

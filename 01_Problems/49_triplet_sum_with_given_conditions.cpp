@@ -1,3 +1,6 @@
+// Problem Description
+// Given an array nums, you need to find the maximum sum of triplet (nums[i] + nums[j] + nums[k]) such that 0 <= i < j < k and nums[i] < nums[j] < nums[k]. If no such triplet exists print 0.
+
 #include <iostream>
 #include <vector>
 #include <algorithm>

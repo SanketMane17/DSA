@@ -26,6 +26,8 @@ vector<vector<int>> threeSum(vector<int> &nums, int s)
     sort(nums.begin(), nums.end());
 
     // Optimal approch
+    // TC - O(n^2)
+    // SC - O(n), n = number of triplets
 
     vector<vector<int>> ans;
 

@@ -1,3 +1,7 @@
+// Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+// Output: [[1,6],[8,10],[15,18]]
+// Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -13,7 +17,7 @@ vector<vector<int>> mergeIntervals(vector<vector<int>> &intervals)
     int n = intervals.size();
 
     sort(intervals.begin(), intervals.end(), sorter);
-    if(n == 1)
+    if (n == 1)
         return intervals;
 
     // TC - O(nlogn)
@@ -31,7 +35,7 @@ vector<vector<int>> mergeIntervals(vector<vector<int>> &intervals)
     }
     cout << idx << endl;
 
-    intervals.resize(idx+1);
+    intervals.resize(idx + 1);
     return intervals;
 
     // TC - O(nlogn)
@@ -49,7 +53,7 @@ vector<vector<int>> mergeIntervals(vector<vector<int>> &intervals)
     //     else {
     //         ans.push_back({prev_st, prev_end});
     //         prev_st = curr_st;
-    //         prev_end = curr_end;     
+    //         prev_end = curr_end;
     //     }
 
     //     if(i == n - 1)

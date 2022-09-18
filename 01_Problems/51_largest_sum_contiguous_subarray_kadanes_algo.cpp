@@ -2,6 +2,8 @@
 // Output: 6
 // Explanation: [4,-1,2,1] has the largest sum = 6.
 
+// Kadanes algorithm
+
 #include <iostream>
 #include <vector>
 #include <algorithm>

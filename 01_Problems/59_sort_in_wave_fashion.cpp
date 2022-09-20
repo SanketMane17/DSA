@@ -1,9 +1,15 @@
+// Input:  arr[] = {10, 5, 6, 3, 2, 20, 100, 80}
+// Output: arr[] = {10, 5, 6, 2, 20, 3, 100, 80} 
+// Explanation: 
+// here you can see {10, 5, 6, 2, 20, 3, 100, 80} first element is larger than the second and the same thing is repeated again and again. large element – small element-large element -small element and so on .it can be small element-larger element – small element-large element -small element too. all you need to maintain is the up-down fashion which represents a wave. there can be multiple answers.
+
 # include<iostream>
 # include<vector>
 # include<algorithm>
 using namespace std;
 
 void sortWaveFashion(vector<int> &arr, int n) {
+// vector<int> sortWaveFashion(vector<int> &arr, int n) {
 
     // Another approach [Compare the neighbourse]
     // TC - O(n)
@@ -20,7 +26,7 @@ void sortWaveFashion(vector<int> &arr, int n) {
     }
 
     // Code for if evenIndex > oddIndex
-    // for(int i = 1;i < n;i += 2) {
+    // for(int i = 1;i < n;i += 2) { // for each odd index
     //     if(arr[i] > arr[i - 1]) {
     //         swap(arr[i], arr[i - 1]);
     //     }

@@ -4,6 +4,9 @@ using namespace std;
 
 void insertionSort(vector<int> &arr) {
 
+    // TC - O(n^2)
+    // SC - O(n)
+    
     for(int i = 1;i < arr.size();i++) {
         int x = arr[i];
         int j = i - 1;

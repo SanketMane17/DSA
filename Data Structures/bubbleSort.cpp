@@ -4,6 +4,9 @@ using namespace std;
 
 void bubbleSort(vector<int> &arr, int n) {
 
+    // TC - O(n^2)
+    // SC - O(1)
+
     for(int i = 0;i < n - 1;i++) { // Number of iterations
         for(int j = 0;j < n - i - 1;j++) {
             if(arr[j] > arr[j+1]) {

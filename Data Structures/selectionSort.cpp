@@ -4,6 +4,9 @@ using namespace std;
 
 void selectionSort(vector<int> &arr, int n) {
 
+    // TC - O(n^2)
+    // SC - O(1)
+
     for(int i = 0;i < n - 1;i++) {
         int minIndex = i;
         for(int j = i + 1;j < n;j++) {

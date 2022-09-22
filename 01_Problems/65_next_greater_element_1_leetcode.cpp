@@ -11,6 +11,9 @@ using namespace std;
 vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
 
     // Optimization - Using unordered_map and stack
+    // TC - O(n)
+    // SC - O(n)
+    
     unordered_map<int,int>umap;
     stack<int>st;
     int n = nums2.size();

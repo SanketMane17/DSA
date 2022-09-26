@@ -29,6 +29,8 @@ int main(){
     // cout<< "Capacity: " << v.capacity() << endl;
     // cout<< "Size: " << v.size() << endl;
 
+    // Note : after adding elements into the vector, vector increases it's size of double of it's original size
+
     // for(int i:v) {
     //     cout<< i << " ";
     // }
@@ -38,7 +40,7 @@ int main(){
     // cout<< "Last: " << v.back() << endl;
 
     // v.shrink_to_fit();
-    // cout<< "Capacity: " << v.capacity() << endl;
+    // cout<< "Capacity: " << v.capacity() << endl; // Memory allocation
     // cout<< "Size: " << v.size() << endl;
 
     // // Clearing vector

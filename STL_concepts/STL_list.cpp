@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     
-    // Doubly Linked List
+    // Doubly Linked List -> Random access not possible
     list<int> l;
 
     list<int> n(5, 100);// Iniliazing 5 elements with 100

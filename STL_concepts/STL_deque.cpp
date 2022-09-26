@@ -1,10 +1,10 @@
 # include<iostream>
-# include<deque>
+# include<deque>  // Library
 using namespace std;
 
 int main(){
 
-    // Doubly ended queue
+    // Doubly ended queue -> Random access is possible
     deque<int> d;
 
     d.push_back(1);

@@ -19,7 +19,7 @@ int main()
 {
 
     // vector<int> arr{0, 1, 0, 3, 3, 0, 5, 0};
-    vector<int> arr{0, 1, 2, 3, 0};
+    vector<int> arr{ 1, 2, 3, 0};
 
     vector<int> ans = moveZeroes(arr);
     for (int i = 0; i < ans.size(); i++)

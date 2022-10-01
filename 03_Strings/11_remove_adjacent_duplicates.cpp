@@ -13,11 +13,8 @@ string removeAdjacentDuplicates(string s) {
 
     for(int i = 1;i < s.length();i++) {
 
-        if(!stack.empty()) {
-            if(stack.top()==s[i])
-                stack.pop();
-            else
-                stack.push(s[i]);   
+        if(!stack.empty() && stack.top() == s[i]) { 
+            stack.pop();
         }
         else
             stack.push(s[i]);

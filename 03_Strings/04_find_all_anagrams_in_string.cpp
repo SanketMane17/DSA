@@ -9,25 +9,24 @@
 #include <unordered_map>
 using namespace std;
 
-bool checkAnagram(string s1, string s2)
-{
+// bool checkAnagram(string s1, string s2)
+// {
+//     if (s1.size() != s2.size())
+//         return false;
 
-    if (s1.size() != s2.size())
-        return false;
+//     unordered_map<char, int> mpp;
+//     for (int i = 0; i < s1.size(); i++)
+//         mpp[s1[i]]++;
 
-    unordered_map<char, int> mpp;
-    for (int i = 0; i < s1.size(); i++)
-        mpp[s1[i]]++;
+//     for (int i = 0; i < s2.size(); i++)
+//     {
+//         if (!mpp[s2[i]])
+//             return false;
 
-    for (int i = 0; i < s2.size(); i++)
-    {
-        if (!mpp[s2[i]])
-            return false;
-
-        mpp[s2[i]]--;
-    }
-    return true;
-}
+//         mpp[s2[i]]--;
+//     }
+//     return true;
+// }
 
 vector<int> findAnagrams(string s, string p)
 {
@@ -78,7 +77,7 @@ vector<int> findAnagrams(string s, string p)
     //     end++;
     // }
 
-    // TC - O(n^3) - runtime error(leetcode)
+    // TC - O(n^2) - runtime error(leetcode)
     // for(int i = 0;i < s.size() - p.size() + 1;i++) {
     //     string temp = "";
     //     for(int j = 0;j < p.size();j++) {
@@ -98,6 +97,8 @@ int main()
     string p = "abc";
     // string s = "abab";
     // string p = "ab";
+
+    cout<< s.find(p) << endl;
 
     vector<int> ans = findAnagrams(s, p);
     for (int i = 0; i < ans.size(); i++)

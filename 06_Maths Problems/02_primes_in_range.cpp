@@ -1,6 +1,18 @@
 # include<bits/stdc++.h>
 using namespace std;
 
+// 1 - O(n)
+// bool isPrime(int n) {
+//     for(int i = 2;i < n;i++) {
+//         if(n % i == 0)
+//             return false;
+//     }
+//     return true;
+// }
+
+// TC - O(root(n) * n)
+// SC - O(n)
+// 2 - O(root(n))
 bool isPrime(int n) {
     for(int i = 2;i <= sqrt(n);i++) {
         if(n % i == 0)
@@ -8,9 +20,6 @@ bool isPrime(int n) {
     }
     return true;
 }
-
-// TC - O(root(n) * end)
-// SC - O(n)
 
 vector<int> primesInRange(int start, int end) {
 

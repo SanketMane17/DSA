@@ -8,7 +8,7 @@ int exponentiation(int a, int b) {
     
     int res = 1;
     while(b > 0) {
-        if((b & 1) != 0)  {// odd
+        if(b & 1)  {// odd
             res = res * a;
         }
 

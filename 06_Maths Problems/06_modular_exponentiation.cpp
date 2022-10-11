@@ -3,6 +3,9 @@ using namespace std;
 
 // TC - O(log b)
 long long modularExp(long long a, long long b, int m) {
+    // if the return type of this function is int then we have to typecast res into long long as,
+    // res = (1LL * res%m * a%m) % m;
+    // a = a (1LL * a%m * a%m) %m
 
     long long res = 1;
     while(b > 0) {

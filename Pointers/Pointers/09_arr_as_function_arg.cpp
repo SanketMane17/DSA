@@ -1,7 +1,9 @@
 # include<iostream>
 using namespace std;
 
-int sumOfArray(int* a, int n){ // Here int a[] & int* a are same
+int sumOfArray(int* a, int n){ 
+    // Here int a[] & int* a are same and size of the arr is depends on pointers size not on the array size
+
     int temp = 0;
     for(int i = 0;i < n;i++){
         temp += *(a+i); // Here a[i] & *(a+i) are same

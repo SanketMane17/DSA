@@ -8,6 +8,7 @@ int main(){
     int **q = &p;
     int ***r = &q;
 
+    cout<< "p = " << p << endl;
     cout<< "*p = " << *p << endl;  
     cout<< "*q = " << *q << endl;
     cout<< "**q = " << *(*q) << endl;

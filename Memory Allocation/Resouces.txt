@@ -1,0 +1,2 @@
+Dynamic memory allocation
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbjNQWkxTaG9WS0EwS0JaSldBc0dMUU5oRmFFd3xBQ3Jtc0tscEpSRmV4dmhwTldpczZ4N1Fxa2dPaXN0MGZPaTlTWXlDazZyams3RTVONlVJNVZuVEcySGRrNG51R2lzYnJhVGxEQkIxS09Mb3BKUENMdWlHZVF6UExqZk5MVmJhcUZ6Q2lHVldXY1hYSHJpd2kycw&q=https%3A%2F%2Fbit.ly%2F3ewm1TF&v=LlqgWQgm58g

@@ -32,7 +32,7 @@ int getPivot(vector<int> nums, int n) { // O(logn)
 
 int binarySearch(vector<int> nums, int start, int end, int k) { // O(logn)
     int s = start, e = end;
-    int mid = s + (e - s);
+    int mid = s + (e - s) / 2;
 
     while(s <= e) {
         if(k == nums[mid])

@@ -21,6 +21,8 @@ char getMaxOccChar(string str)
         arr[ch - 'a']++;
     }
 
+    cout<< endl;
+
     int maxi = -1, ans = -1;
     for (int i = 0; i < 26; i++)
     {

@@ -17,7 +17,7 @@ int binarySearch(vector<int>& nums, int low, int high, int key)
     return binarySearch(nums, low, (mid - 1), key);
 }
     
-// Function to get pivot. For numsay 3, 4, 5, 6, 1, 2
+// Function to get pivot. For num say 3, 4, 5, 6, 1, 2
 // it returns 3 (index of 6)
 int findPivot(vector<int>& nums, int low, int high)
 {
